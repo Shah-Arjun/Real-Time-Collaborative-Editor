@@ -1,7 +1,8 @@
+import "./App.css"
 
 function App() {
   return (
-    <div>App</div>
+    <main className="h-screen w-full bg-gray-950"></main>
   )
 }
 
