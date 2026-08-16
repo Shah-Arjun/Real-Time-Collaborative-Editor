@@ -2,6 +2,7 @@ import express from "express"
 import { createServer } from "http"
 import { Server } from "socket.io"
 import dotenv from "dotenv"
+import { YSocketIO } from "y-socket.io/dist/server"
 
 dotenv.config()
 
@@ -15,6 +16,10 @@ const io = new Server(httpServer, {
         method: ["GET", "POST", "PUT", "DELETE"],
     }
 })
+
+// yjs setup (y-socket.io)
+const ySocketIO = new YSocketIO(io)
+ySocketIO.initialize()
 
 
 app.get("/", (req, res) => {
