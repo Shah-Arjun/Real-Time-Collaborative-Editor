@@ -7,7 +7,7 @@ import { YSocketIO } from "y-socket.io/dist/server"
 dotenv.config()
 
 const app = express()
-app.use(express.static("public"))
+app.use(express.static("public"))    
 const httpServer = createServer(app)
 
 
