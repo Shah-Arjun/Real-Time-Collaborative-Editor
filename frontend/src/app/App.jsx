@@ -19,7 +19,6 @@ function App() {
 
   const handleMount = (editor) => {
     editorRef.current = editor
-
     new MonacoBinding(
       yText,
       editorRef.current.getModel(),
@@ -62,7 +61,7 @@ function App() {
         window.removeEventListener("beforeunload", handleBeforeUnload)
       }
     }
-  }, [username])
+  }, [username, ydoc])
 
 
 
