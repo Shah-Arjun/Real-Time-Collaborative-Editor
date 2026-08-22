@@ -22,7 +22,7 @@ const io = new Server(httpServer, {
 const ySocketIO = new YSocketIO(io)
 ySocketIO.initialize()
 
-
+// Health check endpoint
 app.get("/health", (req, res) => {
     res.status(200).json({
         success: true,
@@ -31,6 +31,7 @@ app.get("/health", (req, res) => {
 })
 
 
+// Start the server
 const PORT = process.env.PORT || 3000
 httpServer.listen(PORT, () => {
     console.log("Server is running on port ", PORT)
