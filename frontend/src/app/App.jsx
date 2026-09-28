@@ -64,7 +64,6 @@ function App() {
   }, [username, ydoc])
 
 
-
   if (!username) {
     return (
       <main className="h-screen w-full bg-gray-950 flex gap-4 p-4 items-center justify-center" >
@@ -80,7 +79,6 @@ function App() {
       </main>
     )
   }
-
 
 
   return (
